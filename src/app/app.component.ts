@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TodosComponent } from './todos/todos.component';
 import { Amplify } from 'aws-amplify';
-import config from '../../amplifyconfiguration.json';
+import outputs from '../../amplify_outputs.json';
 
-Amplify.configure(config);
+Amplify.configure(outputs);
 
 @Component({
   selector: 'app-root',
