@@ -9,11 +9,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install -g @angular/cli@17.3.11
-        - ng version
+        - npx ng version
     build:
       commands:
-        - ng build --configuration=production
+        - npx ng build --configuration=production
   artifacts:
     baseDirectory: dist/amplify-angular-template/browser
     files:
