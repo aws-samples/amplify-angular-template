@@ -7,11 +7,12 @@ backend:
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
+    preBuild:
+      commands:
+        - npx ng version
     build:
       commands:
-        - npm install -g @angular/cli
-        - ng version
-        - ng build --configuration=production
+        - npx ng build --configuration=production
   artifacts:
     baseDirectory: dist/amplify-angular-template/browser
     files:
